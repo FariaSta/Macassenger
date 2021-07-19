@@ -9,7 +9,14 @@
       <input-general type="email" placeholder="Email" />
       <input-general type="Password" placeholder="Password" />
       <span>Forgot your password?</span>
+      <div>
+        <button-focus>Log in</button-focus>
+        <button-not-focus>Register</button-not-focus>
+      </div>
     </form>
+
+
+
 
   </div>
   
@@ -48,6 +55,7 @@
   {
     color: white;
     font-size: 13px;
+    margin-bottom: 14px;
   }
 
 </style>
@@ -55,7 +63,9 @@
 <script>
 import MacaLogo from '../components/MacaLogo.vue'
 import InputGeneral from '../components/InputGeneral.vue'
+import ButtonFocus from '../components/ButtonFocus.vue'
+import ButtonNotFocus from '../components/ButtonNotFocus.vue'
 export default {
-  components: {MacaLogo, InputGeneral}
+  components: {MacaLogo, InputGeneral, ButtonFocus, ButtonNotFocus}
 }
 </script>
