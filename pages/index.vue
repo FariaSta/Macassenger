@@ -9,12 +9,12 @@
       <input-general type="email" placeholder="Email" />
       <input-general type="Password" placeholder="Password" />
       <span>Forgot your password?</span>
-      <div>
+      <div class="button">
         <button-focus>Log in</button-focus>
         <button-not-focus>Register</button-not-focus>
       </div>
     </form>
-
+    <span class="inc">© 2021 Macassenger, Inc.</span>
 
 
 
@@ -26,6 +26,7 @@
   .containerr
   {
     background: #313F49;
+    height: 100vh;
   }
   .title
   {
@@ -56,6 +57,20 @@
     color: white;
     font-size: 13px;
     margin-bottom: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .inc
+  {
+    margin-top: 10%;
+    margin-bottom: 0 !important;
+  }
+  .button
+  {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
   }
 
 </style>
