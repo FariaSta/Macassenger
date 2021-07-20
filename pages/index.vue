@@ -22,11 +22,14 @@
   
 </template>
 <style scoped>
-  
+  html 
+  {
+    height: 100%;
+  }
   .containerr
   {
     background: #313F49;
-    height: 100vh;
+    height: 100%;
   }
   .title
   {
