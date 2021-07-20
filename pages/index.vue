@@ -22,6 +22,7 @@
   
 </template>
 <style scoped>
+  @import url(../public/style.css);
   html 
   {
     height: 100%;
@@ -43,6 +44,7 @@
   {
     color: white;
     font-size: 55px;
+    line-height: 75px;
   }
   form 
   {
@@ -63,6 +65,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+
   }
   .inc
   {
