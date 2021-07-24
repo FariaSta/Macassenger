@@ -1,31 +1,45 @@
 <template>
   <div class="containerr">
-    <maca-logo />
+    <div class="header">
+      <maca-logo />
+    </div>
     <div class="title">
       <h1>Chat for </br> Friends</h1>
     </div>
-    
-    <form action="/">
+
+    <!-- {{this.ifshowFrom}} -->
+    <div class="form" v-if="this.ifshowFrom">
       <input-general type="email" placeholder="Email" />
       <input-general type="Password" placeholder="Password" />
       <span>Forgot your password?</span>
       <div class="button">
-        <button-focus>Log in</button-focus>
-        <button-not-focus>Register</button-not-focus>
+        <button-focus >Log in</button-focus>
+        <div @click="showFrom">
+          <button-not-focus>Register</button-not-focus>
+        </div>
       </div>
-    </form>
-    <span class="inc">© 2021 Macassenger, Inc.</span>
+    </div>
 
-
-
+    <!--<div class="from" v-else>
+      <input-general type="email" placeholder="Email" />
+      <input-general type="Password" placeholder="Password" />
+      <span>Forgot ytut password?</span>
+      <div class="button">
+        <button-focus @click="this.ifshowFrom = true"><</button-focus>
+        <button-not-focus >Register</button-not-focus>
+      </div>
+    </div>-->
+    <footer>
+      <span class="inc">© 2021 Macassenger, Inc.</span>
+    </footer>
   </div>
   
 </template>
 <style scoped>
   @import url(../public/style.css);
-  html 
+  .header
   {
-    height: 100%;
+    display: flex;
   }
   .containerr
   {
@@ -46,12 +60,13 @@
     font-size: 55px;
     line-height: 75px;
   }
-  form 
+  .form 
   {
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
-    
+    justify-content: center ;
   }
   .inputGeneral
   {
@@ -81,15 +96,33 @@
     justify-content: space-evenly;
     width: 100%;
   }
+  footer
+  {
+    height: 10vh;
+  }
 
 </style>
 
 <script>
-import MacaLogo from '../components/MacaLogo.vue'
-import InputGeneral from '../components/InputGeneral.vue'
-import ButtonFocus from '../components/ButtonFocus.vue'
-import ButtonNotFocus from '../components/ButtonNotFocus.vue'
-export default {
-  components: {MacaLogo, InputGeneral, ButtonFocus, ButtonNotFocus}
-}
+  import MacaLogo from '../components/MacaLogo.vue'
+  import InputGeneral from '../components/InputGeneral.vue'
+  import ButtonFocus from '../components/ButtonFocus.vue'
+  import ButtonNotFocus from '../components/ButtonNotFocus.vue'
+
+  export default {
+    components: {MacaLogo, InputGeneral, ButtonFocus, ButtonNotFocus},
+    
+    name: 'Home',  
+    data(){
+      return {
+        ifshowFrom: true
+      }
+    },
+    methods: {
+      showFrom (){
+        this.ifshowFrom = false;
+      },
+    },
+  }
+
 </script>
