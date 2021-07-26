@@ -3,40 +3,44 @@
     <div class="header">
       <maca-logo />
     </div>
-    <div class="title">
-      <h1>Chat for </br> Friends</h1>
-    </div>
-
-    <!-- Formulary log in -->
-    <div class="form" v-if="this.formLogin">
-      <input-general type="email" placeholder="Email" />
-      <input-general type="Password" placeholder="Password" />
-      <span>Forgot your password?</span>
-      <div class="button">
-        <button-focus >Log in</button-focus>
-        <div @click="showFrom">
-          <button-not-focus>Register</button-not-focus>
+    <div class="body">
+      <div class="title">
+        <h1>Chat for </br> Friends</h1>
+      </div>
+      <!-- Formulary log in -->
+      <div class="form" v-if="this.formLogin">
+        <input-general type="email" placeholder="Email" />
+        <input-general type="Password" placeholder="Password" />
+        <span>Forgot your password?</span>
+        <div class="button">
+          <button-focus >Log in</button-focus>
+          <div @click="showFrom">
+            <button-not-focus>Register</button-not-focus>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Formulary register -->
-    <div class="form" v-if="this.formRegister">
-      <div class="form__names">
-        <input-general class="form__names--name" type="text" placeholder="Name" />
-        <input-general type="text" placeholder="Last name" />
-      </div>
-      <input-general type="email" placeholder="Email" />
-      <input-general type="text" placeholder="Username" />
-      <input-general type="Password" placeholder="Password" />
-      <div class="button2">
-          <img style="cursor: pointer " @click="backRegister" src="../public/svg/back.svg" alt="">
-        <div >
-          <button-focus-large>Register</button-focus-large>
+      <!-- Formulary register -->
+      <div class="form" v-if="this.formRegister">
+        <div class="form__names">
+          <input-general class="form__names--name" type="text" placeholder="Name" />
+          <input-general type="text" placeholder="Last name" />
         </div>
-      </div>
-    </div>
+        <input-general type="email" placeholder="Email" />
+        <input-general type="text" placeholder="Username" />
+        <input-general type="Password" placeholder="Password" />
+        <div class="button2">
+          <picture class="containerback">
+            <source class="back" @click="backRegister" srcset="../public/svg/backblack.svg" media="(min-width: 821px)">
+            <img class="back" @click="backRegister" src="../public/svg/back.svg" >
+          </picture>
 
+          <div >
+            <button-focus-large>Register</button-focus-large>
+          </div>
+        </div>
+      </div> 
+    </div>
     <footer>
       <span class="inc">© 2021 Macassenger, Inc.</span>
     </footer>
@@ -88,6 +92,19 @@
   {
     margin-bottom: 11px;
   }
+  .containerback
+  {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .back
+  {
+    cursor: pointer;
+    width: 30px !important;
+  }
   span
   {
     color: white;
@@ -106,10 +123,14 @@
     margin-top: 10%;
     margin-bottom: 0 !important;
   }
+  .ButtonFocus
+  {
+    margin-right: 28px;
+  }
   .button
   {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
   }
   .button2
@@ -117,6 +138,7 @@
     display: flex;
     width: 80%;
     justify-content: center;
+    align-items: center;
   } 
   .button2 img
   {
@@ -126,6 +148,58 @@
   footer
   {
     height: 10vh;
+  }
+
+  @media only screen and (min-width: 821px){
+    .containerr
+    {
+      padding-top: 52px;
+    }
+    .header
+    {
+      position: absolute;
+      top: 100px;
+      left: 7%;
+      
+    }
+    .logo
+    {
+      width: 230px;
+      height: 100px;
+    }
+    .body
+    {
+      margin-top: 115px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .form
+    {
+      margin-right: 7%;
+      background: white;
+      padding: 40px 40px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    span
+    {
+      color: #2D2D2D;
+    }
+    .ButtonNotFocus
+    {
+      color: #2D2D2D;
+    }
+    .inputGeneral
+    {
+      border: 2px solid #2D2D2D;
+      color: black;
+    }
+    .inc
+    {
+      color: white;
+    }
   }
 
 </style>
