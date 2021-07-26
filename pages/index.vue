@@ -7,8 +7,8 @@
       <h1>Chat for </br> Friends</h1>
     </div>
 
-    <!-- {{this.ifshowFrom}} -->
-    <div class="form" v-if="this.ifshowFrom">
+    <!-- Formulary log in -->
+    <div class="form" v-if="this.formLogin">
       <input-general type="email" placeholder="Email" />
       <input-general type="Password" placeholder="Password" />
       <span>Forgot your password?</span>
@@ -20,15 +20,24 @@
       </div>
     </div>
 
-    <!--<div class="from" v-else>
-      <input-general type="email" placeholder="Email" />
-      <input-general type="Password" placeholder="Password" />
-      <span>Forgot ytut password?</span>
-      <div class="button">
-        <button-focus @click="this.ifshowFrom = true"><</button-focus>
-        <button-not-focus >Register</button-not-focus>
+    <!-- Formulary register -->
+    <div class="form" v-if="this.formRegister">
+      <div class="form__names">
+        <input-general class="form__names--name" type="text" placeholder="Name" />
+        <input-general type="text" placeholder="Last name" />
       </div>
-    </div>-->
+      <input-general type="email" placeholder="Email" />
+      <input-general type="text" placeholder="Username" />
+      <input-general type="Password" placeholder="Password" />
+      <span>Forgot your password?</span>
+      <div class="button">
+        <button-focus >Log in</button-focus>
+        <div >
+          <button-not-focus>Register</button-not-focus>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <span class="inc">© 2021 Macassenger, Inc.</span>
     </footer>
@@ -67,6 +76,14 @@
     text-align: center;
     align-items: center;
     justify-content: center ;
+  }
+  .form__names input
+  {
+    width: 150px !important;
+  }
+  .form__names--name
+  {
+    margin-right: 10px;
   }
   .inputGeneral
   {
@@ -115,12 +132,14 @@
     name: 'Home',  
     data(){
       return {
-        ifshowFrom: true
+        formLogin: true,
+        formRegister: false
       }
     },
     methods: {
       showFrom (){
-        this.ifshowFrom = false;
+        this.formLogin = false;
+        this.formRegister = true;
       },
     },
   }
