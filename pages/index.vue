@@ -29,11 +29,10 @@
       <input-general type="email" placeholder="Email" />
       <input-general type="text" placeholder="Username" />
       <input-general type="Password" placeholder="Password" />
-      <span>Forgot your password?</span>
-      <div class="button">
-        <button-focus >Log in</button-focus>
+      <div class="button2">
+          <img style="cursor: pointer " @click="backRegister" src="../public/svg/back.svg" alt="">
         <div >
-          <button-not-focus>Register</button-not-focus>
+          <button-focus-large>Register</button-focus-large>
         </div>
       </div>
     </div>
@@ -113,6 +112,17 @@
     justify-content: space-evenly;
     width: 100%;
   }
+  .button2
+  {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+  } 
+  .button2 img
+  {
+    width: 4%;
+    margin-right: 19px;
+  } 
   footer
   {
     height: 10vh;
@@ -125,9 +135,10 @@
   import InputGeneral from '../components/InputGeneral.vue'
   import ButtonFocus from '../components/ButtonFocus.vue'
   import ButtonNotFocus from '../components/ButtonNotFocus.vue'
+  import ButtonFocusLarge from '../components/ButtonFocusLarge.vue'
 
   export default {
-    components: {MacaLogo, InputGeneral, ButtonFocus, ButtonNotFocus},
+    components: {MacaLogo, InputGeneral, ButtonFocus, ButtonNotFocus, ButtonFocusLarge},
     
     name: 'Home',  
     data(){
@@ -141,6 +152,10 @@
         this.formLogin = false;
         this.formRegister = true;
       },
+      backRegister (){
+        this.formLogin = true;
+        this.formRegister = false;
+      }
     },
   }
 
