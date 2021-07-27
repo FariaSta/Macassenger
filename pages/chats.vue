@@ -1,9 +1,24 @@
 <template>
 
-    <div class="chats">
+    <div class="containerr">
         <div class="header">
             <img src="../public/svg/menu.svg" alt="">
             <search />
+        </div>
+        <div class="chats">
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
+            <chat-windows />
         </div>
     </div>
 
@@ -11,9 +26,9 @@
 
 <style scoped>
 
-    .chats
+    .containerr
     {
-        background: #313F49;
+        background: #242E35;
     }
     .header
     {
@@ -26,12 +41,19 @@
         margin-left: 15px;
         margin-top: 1px;
     }
+    .chats
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
 </style>
 
 <script>
-import Search from '~/components/Search.vue'
+import Search from '@/components/Search.vue'
+import ChatWindows from '@/components/ChatWindows.vue'
 export default {
-    components: {Search}
+    components: {Search, ChatWindows}
 }
 </script>
