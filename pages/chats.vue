@@ -2,8 +2,11 @@
 
     <div class="containerr">
         <div class="header">
-            <img src="../public/svg/menu.svg" alt="">
+            <img src="../public/svg/menu.svg" alt="" style="cursor: pointer;">
             <search />
+        </div>
+        <div class="add">
+            <img src="../public/svg/+.svg" alt="">
         </div>
         <div class="chats">
             <chat-windows />
@@ -46,6 +49,20 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+    .add
+    {
+        width: 56px;
+        height: 56px;
+        border-radius: 30px;
+        background: #7BC411;
+        position: fixed;
+        left: 305px;
+        top: 571px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
     }
 
 </style>

@@ -19,6 +19,7 @@
         display: flex;
         align-items: center;
         margin-top: 16px;
+        cursor: pointer;
     }
     .chat__face
     {

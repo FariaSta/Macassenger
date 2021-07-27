@@ -28,7 +28,7 @@
     position: absolute;
     top: 27px;
     left: 85%;
-
+    cursor: pointer;
   }
 
 
