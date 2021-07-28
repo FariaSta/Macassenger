@@ -5,4 +5,11 @@
 </template>
 <style scoped>
 
+    .TransmitterMessages
+    {
+        color: white;
+        padding: 0px 10px; 
+        border: 2px solid #7BC411;
+        border-radius: 10px;
+    }
 </style>

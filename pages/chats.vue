@@ -32,12 +32,16 @@
                 <h1 class="title__info">Name Surname</h1>
             </div>
             <div class="messages">
-                <div class="transmitter">
-                    <transmitter-messages />
+                <div class="conR">
+                    <div class="conR__receiver">
+                        <receiver-messages />
+                    </div>
                 </div>
-                <div class="receiver">
-                    <receiver-messages />
-                </div>
+                <div class="conT"> 
+                    <div class="conT__transmitter">
+                        <transmitter-messages />
+                    </div>    
+                </div>               
             </div>
             <div class="inputMessages">
                 <input-messages />         
@@ -108,16 +112,42 @@
     .messages
     {
         background: #242E35;
-        height: 80vh;
+        height: 81vh;
+        padding: 15px 15px 0 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: initial;
+        overflow-y: scroll;
+    }
+    .conR__receiver
+    {
+        width: 60%;
+    }
+    .conT__transmitter
+    {
+        width: 60%;
+    }
+    .conR 
+    {
+        display: flex;
+        justify-content: initial;
+        margin-bottom: 10px;
+    }
+    .conT
+    {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 10px;
     }
     .inputMessages
     {
-        height: 10vh;
+        height: 9vh;
         background: #242E35;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
 
 </style>
 
