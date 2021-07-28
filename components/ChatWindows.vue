@@ -1,9 +1,13 @@
 <template>
     <div class="ChatWindows">
-        <div class="chat__face"></div>
+        
         <div class="chat__info">
-            <h1>Name Surname</h1>
-            <p>Hello. How are you?</p>           
+            <face />
+            <div>
+                <h1>Name Surname</h1>
+                <p>Hello. How are you?</p>
+            </div>
+           
         </div>
 
     </div>
@@ -12,7 +16,7 @@
     .ChatWindows
     {
         height: 68px;
-        width: 342px;
+        width: 90%;
         border-radius: 10px;
         background: #313F49;
         padding-left: 14px;
@@ -21,15 +25,9 @@
         margin-top: 16px;
         cursor: pointer;
     }
-    .chat__face
-    {
-        height: 39px;
-        width: 39px;
-        border-radius: 30px;
-        background: #7BC411;
-    }
     .chat__info 
     {
+        display: flex;
         color: white;
     }
     .chat__info h1
@@ -45,3 +43,9 @@
         margin-left: 20px;
     }
 </style>
+<script>
+import Face from '../components/Face.vue'
+export default {
+    components: { Face }
+}
+</script>
