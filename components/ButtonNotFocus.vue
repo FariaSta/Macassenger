@@ -15,6 +15,7 @@
         color: white;
         border: 2px solid #7BC411;
         font-size: 20px;
+        text-decoration: none;
     }
 
 

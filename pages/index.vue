@@ -13,7 +13,7 @@
         <input-general type="Password" placeholder="Password" />
         <span>Forgot your password?</span>
         <div class="button">
-          <button-focus >Log in</button-focus>
+          <button-focus ><nuxt-link to="/chats">Log in</nuxt-link></button-focus>
           <div @click="showFrom">
             <button-not-focus>Register</button-not-focus>
           </div>
@@ -36,7 +36,7 @@
           </picture>
 
           <div >
-            <button-focus-large>Register</button-focus-large>
+            <button-focus-large><nuxt-link to="/chats">Register</nuxt-link></button-focus-large>
           </div>
         </div>
       </div> 
