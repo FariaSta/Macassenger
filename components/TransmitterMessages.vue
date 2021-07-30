@@ -1,8 +1,18 @@
 <template>
     <div class="TransmitterMessages">
-        <p>Hi, Pierre. I am reading a book that I bought yesterday.</p>
+        <p>{{ messageSend }}</p>
     </div>
 </template>
+<script>
+    import { mapState, mapMutations } from 'vuex' 
+
+    export default {
+        computed: {
+            ...mapState(['messageSend'])
+        }
+    }
+
+</script>
 <style scoped>
 
     .TransmitterMessages

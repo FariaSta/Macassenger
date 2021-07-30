@@ -44,14 +44,43 @@
                 </div>               
             </div>
             <div class="inputMessages">
-                <input-messages />   
-                <img style="heigth: 35px; width: 35px" src="../public/images/send.png" alt="Send" @click="send">     
+                <input-messages />        
             </div>
         </div>
     </div>
 
 
 </template>
+
+<script>
+    import Search from '@/components/Search.vue'
+    import ChatWindows from '@/components/ChatWindows.vue'
+    import InputMessages from '@/components/InputMessages.vue'
+    import TransmitterMessages from '@/components/TransmitterMessages.vue'
+    import ReceiverMessages from '@/components/ReceiverMessages.vue'
+    import { mapState, mapMutations } from 'vuex' 
+
+    export default {
+        components: { Search, ChatWindows, InputMessages, ReceiverMessages, TransmitterMessages },
+        data() {
+            return {
+                windowsview: false,
+                chatview: true,
+            }
+        },
+        computed: {
+            ...mapState(['message']),
+            
+        },
+        methods: {
+            ...mapMutations(['send']),
+            back() {
+                this.windowsview = true
+                this.chatview = false
+            }
+        }
+    }
+</script>
 
 <style scoped>
 
@@ -152,30 +181,3 @@
 
 </style>
 
-<script>
-    import Search from '@/components/Search.vue'
-    import ChatWindows from '@/components/ChatWindows.vue'
-    import InputMessages from '@/components/InputMessages.vue'
-    import TransmitterMessages from '@/components/TransmitterMessages.vue'
-    import ReceiverMessages from '@/components/ReceiverMessages.vue'
-    export default {
-        components: { Search, ChatWindows, InputMessages, ReceiverMessages, TransmitterMessages },
-        data() {
-            return {
-                windowsview: false,
-                chatview: true,
-                receiver: '',
-                transmitter: ''
-            }
-        },
-        methods: {
-            send() {
-                return this.transmitter
-            },
-            back() {
-                this.windowsview = true
-                this.chatview = false
-            }
-        }
-    }
-</script>
