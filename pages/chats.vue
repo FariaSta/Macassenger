@@ -47,6 +47,25 @@
                 <input-messages />        
             </div>
         </div>
+        <div class="contact" v-show="contactview">
+            <div class="header">
+                <img src="../public/svg/back.svg" alt="" style="cursor: pointer;">
+                <search />
+            </div>
+            <div class="containerC">
+                <contact />
+                <contact />
+                <contact />
+                <contact />
+                <contact />
+                <contact />
+                <contact />
+                <contact />
+                <contact />
+                <contact />
+                <contact />
+            </div>
+        </div>
     </div>
 
 
@@ -58,22 +77,18 @@
     import InputMessages from '@/components/InputMessages.vue'
     import TransmitterMessages from '@/components/TransmitterMessages.vue'
     import ReceiverMessages from '@/components/ReceiverMessages.vue'
-    import { mapState, mapMutations } from 'vuex' 
+    import Contact from '@/components/Contact.vue'
 
     export default {
-        components: { Search, ChatWindows, InputMessages, ReceiverMessages, TransmitterMessages },
+        components: { Search, ChatWindows, InputMessages, ReceiverMessages, TransmitterMessages, Contact },
         data() {
             return {
                 windowsview: false,
-                chatview: true,
+                chatview: false,
+                contactview: true
             }
         },
-        computed: {
-            ...mapState(['message']),
-            
-        },
         methods: {
-            ...mapMutations(['send']),
             back() {
                 this.windowsview = true
                 this.chatview = false
@@ -83,21 +98,19 @@
 </script>
 
 <style scoped>
-
-    .containerr
+    .search
     {
-        background: #242E35;
+        width: 90%;
     }
-    .header
+    .header 
     {
-        padding-top: 19px;
-        width: 100%;
         display: flex;
     }
     .header img 
     {
         margin-left: 15px;
         margin-top: 1px;
+        margin-right: 7px;
     }
     .chats
     {
@@ -120,6 +133,10 @@
         cursor: pointer;
     }
 
+    .chatsW
+    {
+        background: #242E35;
+    }
     .title
     {
         height: 10vh;
@@ -178,6 +195,18 @@
         align-items: center;
     }
 
+
+    .contact
+    {
+        background: #242E35;
+        height: 100vh;
+    }
+    .containerC
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 </style>
 

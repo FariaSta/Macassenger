@@ -1,29 +1,11 @@
 <template>
     <div class="write">
-        <input type="text" placeholder="Write..." v-model="messageSend" > 
-        <img style="heigth: 35px; width: 35px" src="../public/images/send.png" alt="Send" @click="send">
+        <input type="text" placeholder="Write..." v-model="ms" > 
+        <img style="heigth: 35px; width: 35px" src="../public/images/send.png" alt="Send">
     </div>
 </template>
 <script>
 
-import { mapState, mapMutations } from 'vuex' 
-
-export default {
-    data() {
-        return {
-            
-        }
-    },
-
-    computed: {
-        ...mapState(['messageSend'])
-        
-    },
-    methods: {
-        ...mapMutations(['send']),
-
-    }
-}
 
 </script>
 <style scoped>

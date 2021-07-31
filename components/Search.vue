@@ -9,6 +9,13 @@
 
 <style scoped>
 
+  .search
+  {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   input
   {
     width: 85%;
@@ -26,7 +33,7 @@
   img
   {
     position: absolute;
-    top: 27px;
+    top: 22px;
     left: 85%;
     cursor: pointer;
   }
