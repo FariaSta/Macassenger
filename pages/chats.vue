@@ -57,13 +57,6 @@
                 <contact />
                 <contact />
                 <contact />
-                <contact />
-                <contact />
-                <contact />
-                <contact />
-                <contact />
-                <contact />
-                <contact />
             </div>
         </div>
     </div>
@@ -199,13 +192,14 @@
     .contact
     {
         background: #242E35;
-        height: 100vh;
+        height: 100%;
     }
     .containerC
     {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 90vh;
     }
 
 </style>
