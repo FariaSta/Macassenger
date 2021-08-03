@@ -41,7 +41,37 @@
                     <div class="conT__transmitter">
                         <transmitter-messages />
                     </div>    
-                </div>               
+                </div>     
+                <div class="conR">
+                    <div class="conR__receiver">
+                        <receiver-messages />
+                    </div>
+                </div>
+                <div class="conT"> 
+                    <div class="conT__transmitter">
+                        <transmitter-messages />
+                    </div>    
+                </div> 
+                <div class="conR">
+                    <div class="conR__receiver">
+                        <receiver-messages />
+                    </div>
+                </div>
+                <div class="conT"> 
+                    <div class="conT__transmitter">
+                        <transmitter-messages />
+                    </div>    
+                </div> 
+                <div class="conR">
+                    <div class="conR__receiver">
+                        <receiver-messages />
+                    </div>
+                </div>
+                <div class="conT"> 
+                    <div class="conT__transmitter">
+                        <transmitter-messages />
+                    </div>    
+                </div>           
             </div>
             <div class="inputMessages">
                 <input-messages />        
@@ -76,9 +106,9 @@
         components: { Search, ChatWindows, InputMessages, ReceiverMessages, TransmitterMessages, Contact },
         data() {
             return {
-                windowsview: false,
-                chatview: false,
-                contactview: true
+                windowsview: true,
+                chatview: true,
+                contactview: false,
             }
         },
         methods: {
@@ -110,6 +140,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        overflow-y: scroll;
     }
     .add
     {
@@ -118,7 +149,7 @@
         border-radius: 30px;
         background: #7BC411;
         position: fixed;
-        left: 80%;
+        left: 45vh;
         top: 571px;
         display: flex;
         justify-content: center;
@@ -187,8 +218,6 @@
         justify-content: center;
         align-items: center;
     }
-
-
     .contact
     {
         background: #242E35;
@@ -200,6 +229,29 @@
         flex-direction: column;
         align-items: center;
         height: 90vh;
+    }
+
+    @media only screen and (min-width: 500px){
+        .containerr
+        {
+            display: flex;
+        }
+        .chatsW
+        {
+            width: 600px;
+        }
+        .chatP
+        {
+            width: 100%;
+        }
+
+    }
+    @media only screen and (max-width: 500px){
+        .chatP 
+        {
+            display: none;
+        }
+
     }
 
 </style>

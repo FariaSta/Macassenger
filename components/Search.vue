@@ -27,16 +27,13 @@
     font-size: 20px;
     text-align: left;
     padding: 0 0 0 15px;
-    position: absolute;
-    left: 37px;
   }
   img
   {
-    position: absolute;
-    top: 22px;
-    left: 85%;
     cursor: pointer;
+    margin-left: 15px;
   }
+
 
 
 </style>
