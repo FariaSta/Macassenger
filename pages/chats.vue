@@ -9,20 +9,34 @@
             <div class="add">
                 <img src="../public/svg/+.svg" alt="">
             </div>
-            <div class="chats">
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
-                <chat-windows />
+            <div class="ch">
+                <div class="chats">
+                    <chat-windows />
+                </div>
+                <div class="chats">
+                    <chat-windows />
+                </div>
+                <div class="chats">
+                    <chat-windows />
+                </div>
+                <div class="chats">
+                    <chat-windows />
+                </div>
+                <div class="chats">
+                    <chat-windows />
+                </div>
+                <div class="chats">
+                    <chat-windows />
+                </div>
+                <div class="chats">
+                    <chat-windows />
+                </div>
+                <div class="chats">
+                    <chat-windows />
+                </div>
+                <div class="chats">
+                    <chat-windows />
+                </div>
             </div>
         </div>
         <div class="chatP" v-show="this.chatview">
@@ -135,12 +149,17 @@
         margin-top: 1px;
         margin-right: 7px;
     }
+    .ch
+    {
+        overflow-y: scroll;
+        height: 90vh;
+    }
     .chats
     {
         display: flex;
         align-items: center;
         flex-direction: column;
-        overflow-y: scroll;
+
     }
     .add
     {
@@ -150,7 +169,7 @@
         background: #7BC411;
         position: fixed;
         left: 45vh;
-        top: 571px;
+        top: 90vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -160,6 +179,7 @@
     .chatsW
     {
         background: #242E35;
+        height: 100vh;
     }
     .title
     {
