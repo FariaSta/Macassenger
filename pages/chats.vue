@@ -10,7 +10,7 @@
                 <img src="../public/svg/+.svg" alt="">
             </div>
             <div class="ch">
-                <div class="chats">
+                <div class="chats" @click="chat">
                     <chat-windows />
                 </div>
                 <div class="chats">
@@ -91,6 +91,9 @@
                 <input-messages />        
             </div>
         </div>
+        <div class="selectchat" v-show="selectchat">
+            <h1>Select a chat</h1>
+        </div>
         <div class="contact" v-show="contactview">
             <div class="header">
                 <img src="../public/svg/back.svg" alt="" style="cursor: pointer;">
@@ -121,20 +124,33 @@
         data() {
             return {
                 windowsview: true,
-                chatview: true,
+                chatview: false,
                 contactview: false,
+                selectchat: true,
+                
             }
         },
         methods: {
             back() {
                 this.windowsview = true
                 this.chatview = false
+            },
+            chat(){
+                this.chatview = true
+                this.contactview = false
+                this.selectchat = false
+            },
+            add(){
+                this.contactview = false
+                this.selectchat = false  
+                
             }
         }
     }
 </script>
 
 <style scoped>
+    @import url(../public/style.css);
     .search
     {
         width: 90%;
@@ -250,6 +266,18 @@
         align-items: center;
         height: 90vh;
     }
+    .selectchat
+    {
+        width: 100%;
+        background: #242E35;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .selectchat h1 
+    {
+        font-size: 64px;
+    }
 
     @media only screen and (min-width: 500px){
         .containerr
@@ -264,13 +292,20 @@
         {
             width: 100%;
         }
-
-    }
-    @media only screen and (max-width: 500px){
-        .chatP 
+        .title img 
         {
             display: none;
         }
+
+
+    }
+    @media only screen and (max-width: 500px){
+        .selectchat
+        {
+            display: none;
+
+        }
+
 
     }
 
