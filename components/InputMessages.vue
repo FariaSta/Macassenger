@@ -1,6 +1,6 @@
 <template>
     <div class="write">
-        <input type="text" placeholder="Write..." v-model="ms" > 
+        <input type="text" placeholder="Write..." > 
         <img style="heigth: 35px; width: 35px" src="../public/images/send.png" alt="Send">
     </div>
 </template>
