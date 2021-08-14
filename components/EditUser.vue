@@ -22,9 +22,10 @@
     @import url(../public/style.css);
     .edituser
     {
-        background: #313F49;
+        background: #242E35;
         color: white;
         height: 100vh;
+        width: 100%;
     }
     h1 
     {

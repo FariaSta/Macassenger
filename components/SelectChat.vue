@@ -1,5 +1,5 @@
 <template>
-    <div class="selectchat">
+    <div class="selectchat" v-show="none">
         <h1>Select a chat</h1>
     </div>
 </template>
