@@ -1,5 +1,5 @@
 <template>
-    <div class="chatsW" v-show="true">
+    <div class="chatsW">
         <div class="header">
             <img src="../public/svg/menu.svg" alt="" style="cursor: pointer;">
             <search />

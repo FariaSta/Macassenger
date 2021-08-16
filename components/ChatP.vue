@@ -1,5 +1,5 @@
 <template>
-    <div class="chatP" v-show="none">
+    <div class="chatP">
         <div class="title">
             <img class="title__info" src="../public/svg/back.svg" @click="back" alt="back" style="cursor: pointer">
             <face class="title__info" />
@@ -56,11 +56,16 @@
     import ReceiverMessages from '@/components/ReceiverMessages.vue'
     import TransmitterMessages from '@/components/TransmitterMessages.vue'
     import InputMessages from '@/components/InputMessages.vue'
+    import Face from '@/components/Face.vue'
     export default {
-        components: { ReceiverMessages, TransmitterMessages, InputMessages },
+        components: { ReceiverMessages, TransmitterMessages, InputMessages, Face },
     }
 </script>
 <style scoped>
+    .chatP
+    {
+        width: 100%;
+    }
     .title
     {
         height: 10vh;
@@ -117,11 +122,5 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    @media only screen and (min-width: 500px){
-        .chatP
-        {
-            width: 100%;
-        }
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="contact" v-show="none">
+    <div class="contact">
         <div class="header">
             <img src="../public/svg/back.svg" alt="" style="cursor: pointer;">
             <search />
